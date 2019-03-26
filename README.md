@@ -10,6 +10,9 @@ $pushNotificationSender->send(array_of_tokens,tittle,message,platform);
 $myPushNotificationSender = new pushNotificationSender();
 
 if($myPushNotificationSender->send(array('XXXXXX'),'hello','i am here','ios'))
+
   echo 'message sent';
+  
 else
+
   echo 'Error : message not sent';
