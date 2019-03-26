@@ -16,9 +16,7 @@ class pushNotificationSender {
                 'Content-Type:application/json'
             );
 
-            // Open connection
             $ch = curl_init('https://fcm.googleapis.com/fcm/send');
-            // Set the url, number of POST vars, POST data
             curl_setopt($ch, CURLOPT_URL, $path_to_firebase_cm);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -27,10 +25,8 @@ class pushNotificationSender {
             curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
             
-            // Execute post
             $result = curl_exec($ch);
             
-            // Close connection
             curl_close($ch);
             return $result;
             
