@@ -3,7 +3,7 @@ Send Notifications to Android and IOS with PHP
 
 # usage :
 
-$pushNotificationSender->send(array_of_tokens,tittle,message,platform);
+    $pushNotificationSender->send(array_of_tokens,tittle,message,platform);
 
 # example :
 
